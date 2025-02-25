@@ -1,0 +1,35 @@
+{
+    "name": "Sample Application",
+    "short_name": "SampleApp",
+    "start_url": "/pages/page2.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#333",
+    "theme_color": "#333",
+    "icons": [
+        {
+            "src": "/img/01-s.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/img/sunCloud.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/img/face.png",
+            "type": "image/png",
+            "sizes": "256x256",
+            "purpose": "any"
+        },
+        {
+            "src": "/img/144face.png",
+            "type": "image/png",
+            "sizes": "144x144",
+            "purpose": "any"
+        }
+    ]
+}
+
+
