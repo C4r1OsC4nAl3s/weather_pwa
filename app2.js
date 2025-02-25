@@ -29,9 +29,9 @@ const card = (date, cast, temp) => {
     let textDate = months[month] + ", " + daty + ", " + year;
     let actualDay = Days[day];
     
-    console.log(`this day: ${daty}`);
-    console.log(`this date slice: ${date.slice(0,10)}`);
-    console.log(`this date: ${thisDate}`);
+    //console.log(`this day: ${daty}`);
+    //console.log(`this date slice: ${date.slice(0,10)}`);
+    //console.log(`this date: ${thisDate}`);
     
 
 
@@ -40,8 +40,8 @@ const card = (date, cast, temp) => {
     let min = temp.Minimum.Value;
     let tempText = `Min: ${min}°${unit} | Max: ${max}°${unit}`;
 
-    // console.log(`year: ${year}`);
-    // console.log(`textDate: ${textDate}`);
+    // //console.log(`year: ${year}`);
+    // //console.log(`textDate: ${textDate}`);
 
     let contento = document.querySelector('.content');
     // let barw = document.querySelector('.barw');
@@ -100,21 +100,21 @@ const deploy = async () => {
     let contento = document.querySelector('.content');
     contento.innerHTML = '';
 
-    console.log('ooooooooooooooooooooooooooooooooooooooooo');
+    //console.log('ooooooooooooooooooooooooooooooooooooooooo');
     let coords = await getGeoLocation();
-    console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-    console.log(coords);
-    console.log('iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii');
+    //console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+    //console.log(coords);
+    //console.log('iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii');
     let locationInfo = await getLocationInfo(coords);
-    console.log(locationInfo);
+    //console.log(locationInfo);
     let forecast = await getForecastInfo(locationInfo.Key);
-    console.log(forecast);
-    console.log('ooooooooooooooooooooooooooooooooooooooooo');
+    //console.log(forecast);
+    //console.log('ooooooooooooooooooooooooooooooooooooooooo');
 
     
     forecast.DailyForecasts.forEach((fore) => {
        card(fore.Date, fore.Day, fore.Temperature);  
-    //    console.log('one card');   
+    //    //console.log('one card');   
     });
 
     // console.log("finished");
